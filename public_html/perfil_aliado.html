@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<!-- JQUERY / JQUERY MOBILE -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+<!-- UTF-8 -->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ 
+<!-- ViewPort no scalable/zoomable -->
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+	
+<!-- CSS -->
+<link rel="stylesheet" type="text/css" href="recursos/css/universal.css">
+
+<link rel="stylesheet" media="(max-width: 600px)," type="text/css"  href="recursos/css/universal_compact.css">
+
+<link rel="stylesheet" type="text/css"  href="recursos/css/perfil_aliado.css">
+
+<link rel="stylesheet" media="(max-width: 600px)," type="text/css"  href="recursos/css/perfil_aliado_compact.css">
+   
+<!-- Javascript librerias externas -->
+<script src="recursos/javascript/snap.svg-min.js"></script>   
+ 
+<!-- Javascript interno -->
+<script src="recursos/javascript/perfil_aliado.js"></script>
+
+<script src="recursos/javascript/polygonalGraph.js"></script>
+<script src="recursos/javascript/smartPhotosPane.js"></script>
+    
+<title>UNIÓN</title>
+</head>
+	
+	<body>
+		
+		
+			
+<!-- MENUS -->
+		<div id="menu_bar">
+		
+			
+			
+				<table id="menu_bar_container" border="0" cellpadding="0" cellspacing="0">
+					<tr>
+						<td id="logo_container"><div id="logo"></div></td>
+						<td>	
+							<table id="tabs_container_voluntario" border="0" cellpadding="0" cellspacing="0">
+							
+								<tr id="row_desktop">
+									<td class="menu_tab">
+										<img id="tab_icon" src="recursos/imgs/icono_inicio_blanco.png"/>
+										<span id="tab_title">Inicio</span>
+									</td>
+									
+									<td id="selected_tab" class="menu_tab">
+										<img id="tab_icon" src="recursos/imgs/icono_perfil_blanco.png"/>
+										<span id="tab_title">Perfil</span>
+									</td>
+									
+								</tr>
+								
+								<tr id="row_mobile">
+								
+									<td  class="menu_tab">
+										<img id="tab_icon" src="recursos/imgs/icono_inicio_blanco.png"/>
+									</td>
+									
+									<td id="selected_tab" class="menu_tab">
+										<img id="tab_icon" src="recursos/imgs/icono_perfil_blanco.png"/>
+									</td>
+									
+								</tr>
+		
+								
+								
+									
+							</table>
+						</td>
+					</tr>
+				</table>
+			
+				
+	
+		</div>
+		
+		
+		<div id="main_panel">
+		
+<!-- SIDEBAR (PERFIL) -->
+			<div id="sidebar">
+				
+				
+				<div id="perfil">
+				
+					
+					<div class="foto_perfil_container"><img id="foto_perfil" src="data/images/profile.png"/></div>
+										
+					<div id="estrellas_perfil">
+						
+						<span class="active_star">★</span>
+						<span class="active_star">★</span>
+						<span class="active_star">★</span>
+						<span class="active_star">★</span>
+						<span class="inactive_star">☆</span>
+
+					</div>
+					
+					<div id="nombre_perfil">ITESM-CEM</div>
+					<div id="direccion_perfil">Estado de México</div>
+					
+					<div id="info_extra_perfil">
+						
+						<div id="edad_perfil">Proyectos en curso: <span id="light">2</span> </div>
+						
+						<div id="edad_perfil">Proyectos realizados: <span id="light">4</span> </div>
+						
+						<div id="edad_perfil">Ayudando desde: <span id="light">2014</span> </div>
+						
+						<div id="edad_perfil">Contacto: <span id="light">5471-0549</span> </div>
+						
+						
+						<table id="botones_perfil" border="0" cellpadding="0" cellspacing="0">
+							<tr>
+								<td>
+									<div class="boton">Salir</div>
+								</td>
+								<td>
+									<div class="boton">Ajustes</div>
+								</td>
+							</tr>
+						</table>
+						
+					
+						
+					</div>
+					<div id="mas_info" onclick="expandirPerfil()" class="interface">...</div>
+				
+
+				</div>
+				
+				<div id="perfil_mobile">
+				
+					<table id="profile_mobile_table">
+						<tr>
+							<td id="controlled_td" width="110">
+								<div class="foto_perfil_container_mobile">
+									<img id="foto_perfil" src="data/images/profile.png"/>
+									
+								</div>
+							</td>
+							<td>
+								<div id="nombre_perfil">ITESM-CEM</div>
+								
+					<div id="direccion_perfil">Estado de México</div>
+										
+				<div id="estrellas_perfil">
+						
+						<span class="active_star">★</span>
+						<span class="active_star">★</span>
+						<span class="active_star">★</span>
+						<span class="active_star">★</span>
+						<span class="inactive_star">☆</span>
+
+					</div>
+						
+							<div id="mas_info" onclick="expandirPerfilMobile()" class="interface">...</div>
+								
+							</td>
+						</tr>
+					</table>
+					
+					<div id="info_extra_perfil_mobile">
+						
+						<div id="edad_perfil">Proyectos en curso: <span id="light">2</span> </div>
+						
+						<div id="edad_perfil">Proyectos realizados: <span id="light">4</span> </div>
+						
+						<div id="edad_perfil">Ayudando desde: <span id="light">2014</span> </div>
+						
+						<div id="edad_perfil">Contacto: <span id="light">5471-0549</span> </div>
+						
+						
+						
+						
+						<table id="botones_perfil" border="0" cellpadding="0" cellspacing="0">
+							<tr>
+								<td>
+									<div class="boton">Salir</div>
+								</td>
+								<td>
+									<div class="boton">Ajustes</div>
+								</td>
+							</tr>
+						</table>
+
+
+						
+					</div>
+					
+				</div>
+				
+				
+				<script>
+			
+				setProfileColor("#b972ff");
+
+				</script>
+				
+				<table class="titled_separator2">
+					<tr>
+						<td ><div id="separator_habilidades" class="separator"></div></td>
+						<td><div id="texto_separador">Descripción</div></td>
+						<td><div id="separator_habilidades" class="separator"></div></td>
+					</tr>
+				</table>
+				
+				
+				<div id="mobile_habilidades_separator" class="titled_separator">Descripción</div>
+				
+				<div id="descripcion"> Ment es una empresa de tecnología, inovamos la forma de comunicación de las empresas con sus clientes. Nuestra misión es impulsar la competitividad de nuestros socios a través de tecnología últi, atractiva e inteligente.</div>
+				
+				<table class="titled_separator2">
+					<tr>
+						<td><div id="separator_habilidades" class="separator"></div></td>
+						<td><div id="texto_separador">Área principal</div></td>
+						<td><div id="separator_habilidades" class="separator"></div></td>
+					</tr>
+				</table>
+				
+				<div id="mobile_separator" class="titled_separator">Área principal</div>
+				
+				<table id="intereses" border="0" cellpadding="0" cellspacing="0">
+				
+					<tr>
+						<td> 
+							<div id="icono_interes_salud" class="icono_interes"></div>
+							
+						</td>
+					</tr>
+					<tr>
+						<td id="interes_salud" class="titulo_interes">Salud</td>
+						
+							
+					</tr>
+					
+				</table>
+				
+				
+				<table class="titled_separator2">
+					<tr>
+						<td><div id="separator_habilidades" class="separator"></div></td>
+						<td><div id="texto_separador">Áreas relacionadas</div></td>
+						<td><div id="separator_habilidades" class="separator"></div></td>
+					</tr>
+				</table>
+				
+				<div id="mobile_separator" class="titled_separator">Áreas relacionadas</div>
+				
+				
+				<table id="intereses_secundarios" border="0" cellpadding="0" cellspacing="0">
+					<tr>
+						
+						<td>
+							<div id="icono_interes_medio_white" class="icono_interes_secundario"></div>
+						</td>
+						<td>
+							<div id="icono_interes_educacion" class="icono_interes_secundario"></div>
+						</td>
+					</tr>
+					<tr>
+					
+						<td class="titulo_interes_secundario">Medio Ambiente
+						</td>
+						
+						<td class="titulo_interes_secundario">Educación</td>
+						
+					</tr>	
+				</table>
+				
+					
+
+			</div>
+			
+<!-- TIMELINE (ACTIVIDADES) -->
+	
+			<div id="timeline">
+			
+				<div id="portada">
+				
+					<img id="foto_portada" src="data/images/portada.gif"/>
+					
+				</div>
+				
+				<div class="titled_separator">Actividades en curso</div>
+				
+				<div id="activity">
+				
+					<table id="header_activity">
+					
+						<tr> 						
+							<td width="60">
+								<div id="icono_interes_medio_color" class="categoria_activity"></div>
+							</td>
+							<td>
+								<div id="titulo_activity">Reforestando México</div> 
+								<div id="subtitulo_activity"> ITESM-CEM </div>
+							</td>
+							<td width="72">
+								<div id="fecha_activity" class="interface">
+									<div id="month">SEP</div>
+									<div id="day">5</div>
+								</div>
+							</td>
+						</tr>
+		
+					</table>
+					
+					<div class="separator"></div>
+					
+					<div id="content_activity" >
+
+						<div id="descripcion_activity">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+
+						
+					</div>
+					
+					<a href="www.google.com" id="visitar_button">Visitar página del evento</a>
+					
+					
+	
+
+				</div>
+						
+				
+			</div>
+			
+		</div>
+		
+		
+	</body>
+</html>

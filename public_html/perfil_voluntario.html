@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<!-- JQUERY / JQUERY MOBILE -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+<!-- UTF-8 -->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ 
+<!-- ViewPort no scalable/zoomable -->
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+	
+<!-- CSS -->
+<link rel="stylesheet" type="text/css" href="recursos/css/universal.css">
+
+<link rel="stylesheet" media="(max-width: 600px)," type="text/css"  href="recursos/css/universal_compact.css">
+
+<link rel="stylesheet" type="text/css"  href="recursos/css/perfil_voluntario.css">
+
+<link rel="stylesheet" media="(max-width: 600px)," type="text/css"  href="recursos/css/perfil_voluntario_compact.css">
+   
+<!-- Javascript librerias externas -->
+<script src="recursos/javascript/snap.svg-min.js"></script>   
+ 
+<!-- Javascript interno -->
+<script src="recursos/javascript/perfil_voluntario.js"></script>
+
+<script src="recursos/javascript/polygonalGraph.js"></script>
+<script src="recursos/javascript/smartPhotosPane.js"></script>
+    
+<title>UNIÓN</title>
+</head>
+	
+	<body>
+		
+		
+			
+<!-- MENUS -->
+		<div id="menu_bar">
+		
+			
+			
+				<table id="menu_bar_container" border="0" cellpadding="0" cellspacing="0">
+					<tr>
+						<td id="logo_container"><div id="logo"></div></td>
+						<td>	
+							<table id="tabs_container_voluntario" border="0" cellpadding="0" cellspacing="0">
+							
+								<tr id="row_desktop">
+									<td class="menu_tab"><a id="menu_link" href="google.com">
+										<img id="tab_icon" src="recursos/imgs/icono_inicio_blanco.png"/>
+										<span id="tab_title">Inicio</span>
+										</a>
+									</td>
+									<td class="menu_tab">
+										<img id="tab_icon" src="recursos/imgs/icono_busqueda_blanco.png"/>
+										<span id="tab_title">Búsqueda</span>
+									</td>
+									<td id="selected_tab" class="menu_tab">
+										<img id="tab_icon" src="recursos/imgs/icono_perfil_blanco.png"/>
+										<span id="tab_title">Perfil</span>
+									</td>
+									
+								</tr>
+								
+								<tr id="row_mobile">
+								
+									<td  class="menu_tab"><a id="menu_link" href="google.com">
+										<img id="tab_icon" src="recursos/imgs/icono_inicio_blanco.png"/>
+										</a>
+									</td>
+									<td class="menu_tab">
+										<img id="tab_icon" src="recursos/imgs/icono_busqueda_blanco.png"/>
+									</td>
+									<td id="selected_tab" class="menu_tab">
+										<img id="tab_icon" src="recursos/imgs/icono_perfil_blanco.png"/>
+									</td>
+									
+								</tr>
+		
+								
+								
+									
+							</table>
+						</td>
+					</tr>
+				</table>
+			
+				
+	
+		</div>
+		
+		
+		<div id="main_panel">
+		
+<!-- SIDEBAR (PERFIL) -->
+			<div id="sidebar">
+				
+				
+				<div id="perfil">
+				
+					
+					<div class="foto_perfil_container">
+						<img id="foto_perfil" src="data/images/profile.png"/>
+									
+						<div id="badge_oro" class="badge"></div>
+
+						
+					</div>
+										
+					<div id="nombre_perfil">Fernanda Esparza Nolaser</div>
+					<div id="direccion_perfil">Izcalli, Edo. de México </div>
+					
+					<div id="info_extra_perfil">
+						
+						<div id="edad_perfil">Género: <span id="light"> Masculino</span> </div>
+						<div id="edad_perfil">Edad: <span id="light"> 18 años</span> </div>
+						<div id="edad_perfil">Ocupación: <span id="light"> Estudiante de psicología</span> </div>
+						
+						<div id="edad_perfil">Habilidades técnicas: <span id="light"> Se comer y enfermarme.</span> </div>
+						
+						<table id="botones_perfil" border="0" cellpadding="0" cellspacing="0">
+							<tr>
+								<td>
+									<a href="PHP/destroy_session.php" class="boton">Salir</a>
+								</td>
+								<td>
+									<div class="boton">Ajustes</div>
+								</td>
+							</tr>
+						</table>
+						
+					
+						
+					</div>
+					<div id="mas_info" onclick="expandirPerfil()" class="interface">...</div>
+				
+
+				</div>
+				
+				<div id="perfil_mobile">
+				
+					<table id="profile_mobile_table">
+						<tr>
+							<td id="controlled_td" width="110">
+								<div class="foto_perfil_container_mobile">
+									<img id="foto_perfil" src="data/images/profile.png"/>
+									
+								</div>
+								
+								<div id="badge_oro" class="badge"></div>
+
+							</td>
+							<td>
+								<div id="nombre_perfil">Fernanda Esparza</div>
+					
+							<div id="direccion_perfil">Izcalli, Edo. de México </div>
+							<div id="mas_info" onclick="expandirPerfilMobile()" class="interface">...</div>
+								
+							</td>
+						</tr>
+					</table>
+					
+					<div id="info_extra_perfil_mobile">
+						
+						<div id="edad_perfil">Género: <span id="light"> Masculino</span> </div>
+						<div id="edad_perfil">Edad: <span id="light"> 18 años</span> </div>
+						<div id="edad_perfil">Ocupación: <span id="light"> Estudiante de psicolog asjh asjdhasj asdg ashd ajshdg ashd asdg asd asgd ía</span> </div>
+						
+						<div id="edad_perfil">Habilidades técnicas: <span id="light"> Se comer y enfer akjshdka sah aksjdhdamarme.</span> </div>
+						
+						
+						<table id="botones_perfil" border="0" cellpadding="0" cellspacing="0">
+							<tr>
+								<td>
+									<div class="boton">Salir</div>
+								</td>
+								<td>
+									<div class="boton">Ajustes</div>
+								</td>
+							</tr>
+						</table>
+
+
+						
+					</div>
+					
+				</div>
+				
+				
+				<script>
+			
+				setProfileColor("#b972ff");
+
+				</script>
+				
+				<table class="titled_separator2">
+					<tr>
+						<td ><div id="separator_habilidades" class="separator"></div></td>
+						<td><div id="texto_separador">Habilidades</div></td>
+						<td><div id="separator_habilidades" class="separator"></div></td>
+					</tr>
+				</table>
+				
+				<div id="mobile_habilidades_separator" class="titled_separator">Habilidades</div>
+				
+				<div id="habilidades">
+				
+					<div id="polygraph_container">
+					
+				
+
+						
+				
+					<svg id="polygraph_surface"></svg>
+								
+								<script>
+									
+									initPolygonalGraph([1,0.2,1,0.8,0.9,0.8],"rgba(247, 87, 161, 0.5)",["Trabajo en equipo","Adaptabilidad","Liderazgo","Creatividad","Iniciativa","Comunicación"]);
+	
+								</script>
+								
+					</div>
+
+					
+				</div>
+				
+				
+				<table class="titled_separator2">
+					<tr>
+						<td><div id="separator_habilidades" class="separator"></div></td>
+						<td><div id="texto_separador">Intereses</div></td>
+						<td><div id="separator_habilidades" class="separator"></div></td>
+					</tr>
+				</table>
+				
+				<div id="mobile_intereses_separator" class="titled_separator">Intereses</div>
+				
+
+				<table id="intereses" border="0" cellpadding="0" cellspacing="0">
+					<tr>
+						<td> 
+							<div id="icono_interes_salud_white" class="icono_interes"></div>
+							
+						</td>
+						<td>
+							<div id="icono_interes_medio_white" class="icono_interes"></div>
+						</td>
+						<td>
+							<div id="icono_interes_educacion_white" class="icono_interes"></div>
+						</td>
+					</tr>
+					<tr height="50">
+					
+						<td id="icono_interes_salud_white" class="titulo_interes">Salud</td>
+						<td id="icono_interes_medio_white" class="titulo_interes">Medio Ambiente
+						</td>
+						<td id="icono_interes_educacion_white" class="titulo_interes">Educación</td>
+						
+					</tr>	
+				</table>
+
+			</div>
+			
+<!-- TIMELINE (ACTIVIDADES) -->
+	
+			<div id="timeline">
+				
+				<div class="titled_separator">Actividades Relizadas</div>
+				
+				<div id="activity">
+				
+					
+					<div id="titulo_activity_imp"> Aún no hay actividades realizadas.</div> 
+					
+					<div id="content_activity" >
+
+						<div id="descripcion_activity"></div>
+
+					
+		
+
+					</div>
+					
+					
+	
+
+				</div>
+						
+				
+			</div>
+			
+		</div>
+		
+		
+	</body>
+</html>
